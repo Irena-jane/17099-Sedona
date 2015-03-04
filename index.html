@@ -6,7 +6,7 @@
   <title>HTML Academy:Sedona</title>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
-  <link rel="stylesheet" href="google.css">
+  <link rel="stylesheet" href="css/google.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
                 <a href="#0" class="btn-close">Закрыть</a>
                 <ul>
                     <li><a href="#sedona-map">Карта штата</a></li>
-                    <li><a href="#intro">ИНФОРМАЦИЯ</a></li>
+                    <li><a href="#intro">информация</a></li>
                     <li><a href="#photo">фото и видео</a></li>
                     <li><a href="#hotels">гостиницы</a></li>
                 </ul>
@@ -40,99 +40,95 @@
             <h1 class="main-page__title">Sedona</h1>
 
             <section id="intro" class="intro">
-                <h1>СЕДОНА — небольшой  городок в АРИЗОНЕ,  зАСЛУЖИвающий большего!</h1>
+                <h2>Седона — небольшой  городок в аризоне,  заслуживающий большего!</h2>
                 <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
             </section>
 
             <section id="photo">
-                <h1>НАСТОЯЩИЙ ГОРОДОК</h1>
+                <h2 class="h1">Настоящий городок</h2>
                 <p>— №1 —</p>
-                <p>СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+                <p>Седона не атракцион для туристов, там течет своя жизнь</p>
                 <div class="img-wrapper">
                     <img src="" alt="Sedona photo">
                 </div>
-                <ul>
-                    <li>
-                        <h2 class="h1">Жилье</h2>
+                <ul class="attractions">
+                    <li class="acctractions__item">
+                        <h3 class="h1">Жилье</h3>
                         <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                     </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2 class="h1">СУВЕНИРЫ</h2>
-                        <p>Не только китайского, но и местного производства!</p>
+                
+                    <li class="acctractions__item">
+                        <h3 class="h1">Сувениры</h3>
+                        <p>не только китайского, но и местного производства!</p>
                     </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h2 class="h1">ЕДА</h2>
-                        <p>Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                
+                    <li class="acctractions__item">
+                        <h3 class="h1">Еда</h3>
+                        <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                     </li>
                 </ul>
             </section>
 
             <section>
-                <h1>ТАМ ЕСТЬ Мост дьявола</h1>
+                <h2 class="h1">Там есть мост дьявола</h2>
                 <p>— №2 —</p>
-                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                <p>Да, по нему можно пройти! если конечно вы осмелитесь</p>
                 <div class="img-wrapper">
-                    <img src="" alt="Diablo Bridge photo">
+                    <img src="" alt="diablo bridge photo">
                 </div>
             </section>
 
             <section>
-                <h1>НЕБОЛЬШАЯ ПЛОЩАДЬ</h1>
+                <h2 class="h1">Небольшая площадь</h2>
                 <p>— №3 —</p>
-                <p>ВСЕ достопримечательности находятся очень близко</p>
+                <p>Все достопримечательности находятся очень близко</p>
             </section>
 
             <section>
-                <h1>КРАСИВАЯ ДОРОГА</h1>
+                <h2 class="h1">Красивая дорога</h2>
                 <p>— №4 —</p>
-                <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+                <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
             </section>
 
             <section>
-                <h1>МАЛО ТУРИСТОВ</h1>
+                <h2 class="h1">Мало туристов</h2>
                 <p>— №5 —</p>
                 <p>Большинство едет в гранд каньон и толпится там</p>
             </section>
 
-            <section class="intro-hotel">
-                <h1>ЗАИНТЕРЕСОВАЛИСЬ?</h1>
-                <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
-            </section>
-
             <section id="hotels" class="hotels">
-                <h1>ПОИСК ГОСТИНИЦЫ В седоне</h1>
+                <div class="h1">Заинтересовались?</div>
+                <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+
+                <h2 class="h1">Поиск гостиницы в Седоне</h2>
                 
                 <form action="" method="POST" class="hotels__form">
                     <label for="">Дата заезда:</label>
                     <div class="calendar-wrapper">
                         <input type="text" placeholder="24 Апреля 2014">
                     </div>
-                    <label for="">Дата Выезда:</label>
+                    <label for="">Дата выезда:</label>
                     <div class="calendar-wrapper">
                         <input type="text" placeholder="4 июля 2014">
                     </div>
                     
-                    <article class="counter-widget__wrapper">
-                        <h1>ВзрослыЕ:</h1>
+                    <div class="counter-widget__wrapper">
+                        <h3 class="h1">взрослые:</h3>
                         <div class="counter-widget">
-                            <a href="#0" class="btn-minus">—</a>
+                            <span class="btn-minus">—</span>
                             <span class="count">2</span>
-                            <a href="#0" class="btn-plus">+</a>
+                            <span class="btn-plus">+</span>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="counter-widget__wrapper">
-                        <h1>ДетИ:</h1>
+                    <div class="counter-widget__wrapper">
+                        <h3 class="h1">дети:</h3>
                         <div class="counter-widget">
-                            <a href="#0" class="btn-minus">—</a>
+                            <span class="btn-minus">—</span>
                             <span class="count">2</span>
-                            <a href="#0" class="btn-plus">+</a>
+                            <span class="btn-plus">+</span>
                         </div>
-                    </article>
+                    </div>
                     <a href="#0" class="btn-search">НАЙТИ</a>
                 </form>
             </section>
@@ -143,15 +139,15 @@
     
     <footer class="main-footer">
         <div class="container">
-            <div class="h1">#visitSEDONA</div>
+            <div class="h1">#visitsedona</div>
             <ul class="main-footer__socials">
                 <li><a href="#0">Twitter</a></li>
                 <li><a href="#0">Facebook</a></li>
                 <li><a href="#0">Youtube</a></li>
             </ul>
-            <div class="copyright">WEBSITE by
+            <div class="copyright">website by
                 <a href="#0" title="author-link">Дизайнер</a>
-                FOR
+                for
                 <a href="https://htmlacademy.ru" title="htmlacademy">htmlacademy.ru</a>
             </div>
         </div>
@@ -160,7 +156,7 @@
   <!-- <script src="js/script.js"></script> -->
 <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script> 
  
-<script src="google-map.js"></script>
+<script src="js/google-map.js"></script>
 
 </body>
 </html>
