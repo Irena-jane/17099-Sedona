@@ -1,3 +1,8 @@
+//For fields having the same max and min you can use default values
+//For field with specified max and min you can specify them by data-min or data-max attributes.
+// For fields with unliminited max you can specify data-max="unlimit".
+
+
 (function() {
   var wdg_counters = document.querySelectorAll('.js-counter');
   var min_counter = 0;
@@ -14,16 +19,20 @@
 
   function changeCounter(e){
     var e = e || window.event;
-
     var target = e.target;
+
     if(target.tagName != 'BUTTON') return;
-    var parent = this;
+
     var input = this.querySelector('input');
-     if(parent && target.dataset.count == 'minus') {
-      if(--input.value < min_counter) input.value = min_counter;
+    var min = input.dataset.min || min_counter;
+    var max = input.dataset.max || max_counter;
+
+     if(target.dataset.count == 'minus') {
+      if(--input.value < min) input.value = min;
      }
-     if(parent && target.dataset.count == 'plus') {
-      if(++input.value > max_counter) input.value = max_counter;
+     if(target.dataset.count == 'plus') {
+      max != 'unlimit' && ++input.value > max? input.value = max : ++input.value;
+
      }
     return false;
   };
@@ -31,15 +40,17 @@
   function checkCounter(e){
     var e = e || window.event;
     var target = e.target;
+    var min = target.dataset.min || min_counter;
+    var max = target.dataset.max || max_counter;
     var val = target.value;
 
     var reg = /^[0-9]+$/;
+
     if(!val.match(reg)) {
       target.value = val.slice(0, val.length-1);
-      target.value = min_counter;
     }
-    if(val < min_counter ) target.value = min_counter;
-    if(val > max_counter) target.value = max_counter;
+    if(val == '' || val < min) target.value = min;
+    if(max != 'unlimit' && val > parseInt(max)) target.value = max;
   };
 
 
