@@ -31,7 +31,7 @@
       if(--input.value < min) input.value = min;
      }
      if(target.dataset.count == 'plus') {
-      max != 'unlimit' && ++input.value > max? input.value = max : ++input.value;
+      max != 'unlimit' && input.value > (max-1)? input.value = max : ++input.value;
 
      }
     return false;
@@ -43,13 +43,12 @@
     var min = target.dataset.min || min_counter;
     var max = target.dataset.max || max_counter;
     var val = target.value;
-
     var reg = /^[0-9]+$/;
 
     if(!val.match(reg)) {
       target.value = val.slice(0, val.length-1);
     }
-    if(val == '' || val < min) target.value = min;
+    if(target.value === '' || val < min) target.value = min;
     if(max != 'unlimit' && val > parseInt(max)) target.value = max;
   };
 
