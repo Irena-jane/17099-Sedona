@@ -4,10 +4,10 @@
 
 
 (function() {
-  var wdg_counters = document.querySelectorAll('*[class^="js-counter"');
-  var input_tmpl = document.querySelector('#input-template').innerHTML;
-  var adults = ['взрослого'];
-  var children = ['ребенка'];
+  var wdg_counters = document.querySelectorAll('.js-counter');
+  // var input_tmpl = document.querySelector('#input-template').innerHTML;
+  // var adults = ['взрослого'];
+  // var children = ['ребенка'];
 
   var min_counter = 0;
   var max_counter = 30;
@@ -60,7 +60,7 @@
     return res;
   };
 
-    function generateCustomerInputs(val){
-      // var row =
-    };
+    // function generateCustomerInputs(val){
+    //   // var row =
+    // };
 })();

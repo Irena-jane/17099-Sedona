@@ -88,7 +88,7 @@
           <div class="row js-row">
             <div class="col s-4">
               <label for="text7">Количество взрослых: <span>*</span></label>
-              <div class="counter js-counter-adults clearfix">
+              <div data-info="adults" class="counter js-counter clearfix">
                 <button data-count="plus" class="counter-action minus">минус</button>
                 <input data-min="1" type="text" name="people-count" class="people-count counter-input" value="1">
                 <button data-count="minus" class="counter-action plus">плюс</button>
@@ -96,7 +96,7 @@
             </div>
             <div class="col s-4">
               <label for="text8">Количество детей: <span>*</span></label>
-              <div class="counter js-counter-children clearfix">
+              <div  data-info="children" class="counter js-counter clearfix">
                 <button data-count="plus" class="counter-action minus">минус</button>
                 <input data-min="0" data-max="10" type="text" name="children-count" class="children-count counter-input" value="0">
                 <button data-count="minus" class="counter-action plus">плюс</button>
@@ -275,7 +275,7 @@
     </div>
   </div>
 
-  <script src="../bower_components/mustache.js"></script>
+  <!--script src="../bower_components/mustache.js"></script-->
   <script src="js/script.js"></script>
 </body>
 </html>
