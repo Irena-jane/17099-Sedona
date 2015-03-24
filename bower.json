@@ -17,5 +17,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "mustache.js": "~1.2.0"
+  }
 }

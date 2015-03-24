@@ -54,9 +54,9 @@
   function checkValue(val, min, max){
     var res = parseInt(val);
 
-    if(isNaN(res) || res < min) res = min;
+    if(isNaN(res) || res < min) return min;
 
-    if(max != 'unlimit' && res > parseInt(max)) res = max;
+    if(max != 'unlimit' && res > parseInt(max)) return max;
     return res;
   };
 
