@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Седона</title>
-  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -85,10 +85,10 @@
 
           <h2>Количество путешественников</h2>
 
-          <div class="row">
+          <div class="row js-row">
             <div class="col s-4">
               <label for="text7">Количество взрослых: <span>*</span></label>
-              <div class="counter js-counter clearfix">
+              <div class="counter js-counter-adults clearfix">
                 <button data-count="plus" class="counter-action minus">минус</button>
                 <input data-min="1" type="text" name="people-count" class="people-count counter-input" value="1">
                 <button data-count="minus" class="counter-action plus">плюс</button>
@@ -96,16 +96,32 @@
             </div>
             <div class="col s-4">
               <label for="text8">Количество детей: <span>*</span></label>
-              <div class="counter js-counter clearfix">
+              <div class="counter js-counter-children clearfix">
                 <button data-count="plus" class="counter-action minus">минус</button>
-                <input data-min="0" data-max="50" type="text" name="children-count" class="children-count counter-input" value="0">
+                <input data-min="0" data-max="10" type="text" name="children-count" class="children-count counter-input" value="0">
                 <button data-count="minus" class="counter-action plus">плюс</button>
               </div>
             </div>
             <div class="col s-4">
             </div>
           </div>
-
+        </div>
+<script id="input-template" type="text/html">
+            <div class="col s-4">
+              <label for="text8">Фамилия {{type}} {{number}}: <span>*</span></label>
+              <input type="text" id="text8">
+            </div>
+            <div class="col s-4">
+              <label for="text9">Имя {{type}} {{number}}: <span>*</span></label>
+              <input type="text" id="text9">
+            </div>
+            <div class="col s-4">
+              <label for="text10">Отчество {{type}} {{number}}</label>
+              <input type="text" id="text10">
+            </div>
+</script>
+          <div class="js-output-adults"></div>
+          <div class="js-output-children"></div>
           <!-- <div class="row">
             <div class="col s-4">
               <label for="text8">Фамилия взрослого №1: <span>*</span></label>
@@ -151,7 +167,7 @@
             </div>
           </div> -->
 
-        </div>
+
 
         <!-- step 3-->
         <div class="step step3">
@@ -259,6 +275,7 @@
     </div>
   </div>
 
+  <script src="../bower_components/mustache.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

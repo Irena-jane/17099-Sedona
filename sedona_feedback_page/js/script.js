@@ -4,7 +4,11 @@
 
 
 (function() {
-  var wdg_counters = document.querySelectorAll('.js-counter');
+  var wdg_counters = document.querySelectorAll('*[class^="js-counter"');
+  var input_tmpl = document.querySelector('#input-template').innerHTML;
+  var adults = ['взрослого'];
+  var children = ['ребенка'];
+
   var min_counter = 0;
   var max_counter = 30;
   for(var i = 0, len = wdg_counters.length; i < len; i++){
@@ -29,6 +33,7 @@
 
      if(target.dataset.count == 'minus') {
       if(--input.value < min) input.value = min;
+
      }
      if(target.dataset.count == 'plus') {
       max != 'unlimit' && input.value > (max-1)? input.value = max : ++input.value;
@@ -42,15 +47,20 @@
     var target = e.target;
     var min = target.dataset.min || min_counter;
     var max = target.dataset.max || max_counter;
-    var val = target.value;
-    var reg = /^[0-9]+$/;
-
-    if(!val.match(reg)) {
-      target.value = val.slice(0, val.length-1);
-    }
-    if(target.value === '' || val < min) target.value = min;
-    if(max != 'unlimit' && val > parseInt(max)) target.value = max;
+    var val = checkValue(target.value, min, max);
+    target.value = val;
   };
 
+  function checkValue(val, min, max){
+    var res = parseInt(val);
 
+    if(isNaN(res) || res < min) res = min;
+
+    if(max != 'unlimit' && res > parseInt(max)) res = max;
+    return res;
+  };
+
+    function generateCustomerInputs(val){
+      // var row =
+    };
 })();
