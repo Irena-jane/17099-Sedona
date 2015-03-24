@@ -96,7 +96,7 @@
             </div>
             <div class="col s-4">
               <label for="text8">Количество детей: <span>*</span></label>
-              <div  data-info="children" class="counter js-counter clearfix">
+              <div data-info="children" class="counter js-counter clearfix">
                 <button data-count="plus" class="counter-action minus">минус</button>
                 <input data-min="0" data-max="10" type="text" name="children-count" class="children-count counter-input" value="0">
                 <button data-count="minus" class="counter-action plus">плюс</button>
@@ -108,19 +108,34 @@
         </div>
 <script id="input-template" type="text/html">
             <div class="col s-4">
-              <label for="text8">Фамилия {{type}} {{number}}: <span>*</span></label>
+              <label for="text8">Фамилия {{type}} №{{number}}: <span>*</span></label>
               <input type="text" id="text8">
             </div>
             <div class="col s-4">
-              <label for="text9">Имя {{type}} {{number}}: <span>*</span></label>
+              <label for="text9">Имя {{type}} №{{number}}: <span>*</span></label>
               <input type="text" id="text9">
             </div>
             <div class="col s-4">
-              <label for="text10">Отчество {{type}} {{number}}</label>
+              <label for="text10">Отчество {{type}} №{{number}}</label>
               <input type="text" id="text10">
             </div>
 </script>
-          <div class="js-output-adults"></div>
+          <div class="js-output-adults">
+            <div class="row">
+              <div class="col s-4">
+                <label for="text8">Фамилия взрослого №1: <span>*</span></label>
+                <input type="text" id="text8">
+              </div>
+              <div class="col s-4">
+                <label for="text9">Имя взрослого №1: <span>*</span></label>
+                <input type="text" id="text9">
+              </div>
+              <div class="col s-4">
+                <label for="text10">Отчество взрослого №1</label>
+                <input type="text" id="text10">
+              </div>
+            </div>
+          </div>
           <div class="js-output-children"></div>
           <!-- <div class="row">
             <div class="col s-4">
