@@ -1,5 +1,12 @@
 node_modules
-bower_components
+bower_components/mustache.js/bin
+bower_components/mustache.js/wrappers
+bower_components/mustache.js/hooks
+bower_components/mustache.js/*.json
+bower_components/mustache.js/*.md
+bower_components/mustache.js/LICENSE
+bower_components/mustache.js/Rakefile
+bower_components/mustache.js/*.nuspec
 npm-debug.log
 Thumbs.db
 .DS_Store
